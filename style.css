@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  header {
+    background: #1d3557;
+  }
+  .container111 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container111 button {
+    border: none;
+  }
+  .button {
+    position: relative;
+    height: 8vmin;
+    width: 40vmin;
+    background: #833be2;
+    border-radius: 55px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: none;
+  }
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    border-radius: 55px;
+    background: #5b13b9;
+  }
+  .button.active {
+    height: 15px;
+    width: 200px;
+  }
+  
+  .button.active::before {
+    animation: layer 4s ease-in-out forwards;
+  }
+  @keyframes layer {
+    100% {
+      left: 0%;
+    }
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    transition-delay: 0.2s;
+  }
+  
+  .content i,
+  .content .button-text {
+    color: #fff;
+  
+    font-size: 4vmin;
+    font-weight: 500;
+  }
+  .content .button-text {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+  .button.active .content {
+    transform: translateY(60px);
+  }
+  
+  #outputStatment {
+    border: 1px solid black;
+    height: 50px;
+    margin-top: 20px;
+  }
+  #outputResult {
+    border: 1px solid black;
+    height: 50px;
+    margin-top: 20px;
+  }
+  
+  footer {
+    background: #1d3557;
+    color: white;
+  }
+  
